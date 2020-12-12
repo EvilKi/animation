@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS3动画3D立方体+砰然心动</title>   
+</head>
+
+<body>
+<style> 
+    *{
+    	margin-right: 50px;
+    	padding: 0px;
+
+    }
+    .heart{
+          position: absolute;
+          width: 120px;
+          height: 120px;
+          top: 100px;
+          left: 20%;
+          margin-left: 265px;
+  }
+    .heart:before,
+    .heart:after {
+          position: absolute;
+          padding: 30px;
+          content: "爸妈我爱你";
+          font-size:14px;
+          color: yellow;
+          left: 83px;
+          top: 20px;
+          width: 44px;
+          height: 115px;
+          background: #fc2e5a;
+          border-radius: 50px 50px 0 0;
+          transform: rotate(-45deg);
+          transform-origin: 0 100%;
+  }
+    .heart:after {
+          left: -20px;
+          transform: rotate(45deg);
+          transform-origin :100% 100%;
+  }
+    .heart{
+           animation: pounding .5s linear infinite alternate;
+  }
+        @keyframes pounding{
+          0%{ transform: scale(1.2); }
+          100%{ transform: scale(1); }
+  }
+        @keyframes heart-anim {
+          46% {
+
+            transform: scale(1);
+  }
+          50% {
+            transform: scale(1.3);
+  }
+          52% {
+            transform: scale(1.5);
+  }
+          55% {
+            transform: scale(3);
+  }
+          100% {
+            opacity: 0;
+            transform: scale(50);
+  }
+</style>
+         <div class="heart"></div>
+</body>
+<script type="text/javascript">
+
+</html>
